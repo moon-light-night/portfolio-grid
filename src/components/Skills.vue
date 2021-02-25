@@ -1,65 +1,13 @@
 <template>
   <div class="skills">
     <div class="skills__title title">Skills</div>
-    <div class="skills__text">In my work I use such technologies as</div>
+    <div class="skills__text">Use such technologies as</div>
     <div class="skills__items">
-      <div class="skills__item">
+      <div class="skills__item" v-for="(item, index) in srcs" :key="index">
         <div class="skills__item-icon">
-          <img src="@/assets/html.png" alt="img" />
+          <img :src="require(`../assets/${item}.png`)" :alt="img" />
         </div>
-        <div class="skills__item-desc">CSS</div>
-      </div>
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/css.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">CSS</div>
-      </div>
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/js.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">JavaScript</div>
-      </div>
-
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/vue.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">Vue.js</div>
-      </div>
-
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/sass.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">Sass/Scss</div>
-      </div>
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/git.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">Git</div>
-      </div>
-
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/webp.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">Webpack</div>
-      </div>
-
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/firebase.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">Firebase</div>
-      </div>
-      <div class="skills__item">
-        <div class="skills__item-icon">
-          <img src="@/assets/figma.png" alt="img" />
-        </div>
-        <div class="skills__item-desc">Figma</div>
+        <div class="skills__item-desc">{{ item }}</div>
       </div>
     </div>
   </div>
