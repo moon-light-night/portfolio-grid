@@ -7,7 +7,7 @@
         <div class="skills__item-icon">
           <img src="@/assets/html.png" alt="img" />
         </div>
-        <div class="skills__item-desc">HTML</div>
+        <div class="skills__item-desc">CSS</div>
       </div>
       <div class="skills__item">
         <div class="skills__item-icon">
@@ -15,7 +15,6 @@
         </div>
         <div class="skills__item-desc">CSS</div>
       </div>
-
       <div class="skills__item">
         <div class="skills__item-icon">
           <img src="@/assets/js.png" alt="img" />
@@ -45,7 +44,7 @@
 
       <div class="skills__item">
         <div class="skills__item-icon">
-          <img src="@/assets/webpack.png" alt="img" />
+          <img src="@/assets/webp.png" alt="img" />
         </div>
         <div class="skills__item-desc">Webpack</div>
       </div>
@@ -65,6 +64,24 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    srcs: [
+      'Html',
+      'Css',
+      'JavaScript',
+      'Vue',
+      'Sass-Scss',
+      'Git',
+      'Webpack',
+      'Firebase',
+      'Figma',
+    ],
+  }),
+}
+</script>
 
 <style lang="scss" scoped>
 .skills {
