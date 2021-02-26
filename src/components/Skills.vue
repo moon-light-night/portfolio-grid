@@ -35,29 +35,28 @@ export default {
 .skills {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   height: 610px;
-  @media (max-width: 750px) {
-    margin-top: 200px;
-  }
   @media (max-width: 375px) {
-    margin-top: 400px;
+    height: auto;
   }
   &__title {
     text-align: center;
+    margin-top: 90px;
     @media (max-width: 750px) {
-      margin-bottom: 20px;
+      margin-top: 30px;
     }
   }
   &__text {
     text-align: center;
+    margin-top: 50px;
     @media (max-width: 750px) {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
   &__items {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 84px;
     @media (max-width: 750px) {
       margin: 0 auto;
       width: 200px;
@@ -79,7 +78,7 @@ export default {
     }
   }
   &__item-desc {
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
   }
 }
 </style>

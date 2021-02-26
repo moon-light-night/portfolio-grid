@@ -2,8 +2,16 @@
   <div class="portfolio">
     <div class="portfolio__title title">Portfolio</div>
     <div class="portfolio__item">
-      <img src="@/assets/screen.png" />
-      <p>here is link to smth</p>
+      <img src="@/assets/thrive.png" />
+      <a>here is link to smth</a>
+    </div>
+    <div class="portfolio__item">
+      <img src="@/assets/thrive.png" />
+      <a>here is link to smth</a>
+    </div>
+    <div class="portfolio__item">
+      <img src="@/assets/thrive.png" />
+      <a>here is link to smth</a>
     </div>
   </div>
 </template>
@@ -25,6 +33,12 @@
     img {
       width: 80%;
       margin-bottom: 45px;
+    }
+    a {
+      margin-bottom: 100px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
