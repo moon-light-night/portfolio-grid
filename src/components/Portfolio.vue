@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-    <div class="portfolio__title title">Portfolio</div>
+    <div class="portfolio__title"><a name="portfolio">Portfolio</a></div>
     <div class="portfolio__item">
       <img src="@/assets/thrive.png" />
       <a>here is link to smth</a>
@@ -17,14 +17,15 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/profile/mixins.scss';
+
 .portfolio {
   width: 100%;
-  height: 2253px;
-  background-color: rgba(246, 246, 246, 1);
+  padding: 113px 0 0 0;
+  background-color: rgb(235, 223, 223);
   &__title {
-    padding-top: 113px;
-    text-align: center;
-    margin-bottom: 47px;
+    @include style_title;
+    margin: 0 0 47px 0;
   }
   &__item {
     display: flex;
@@ -32,10 +33,10 @@
     align-items: center;
     img {
       width: 80%;
-      margin-bottom: 45px;
+      margin: 0 0 45px;
     }
     a {
-      margin-bottom: 100px;
+      margin: 0 0 99px;
       &:hover {
         cursor: pointer;
       }

@@ -1,37 +1,45 @@
 <template>
-  <div class="header">
-    <div class="header__nav">
-      <div class="header__nav-item">Home</div>
-      <div class="header__nav-item">About me</div>
-      <div class="header__nav-item">Skills</div>
-      <div class="header__nav-item">Portfolio</div>
-      <div class="header__nav-item">Contacts</div>
-    </div>
-    <div class="header__line"></div>
-    <div class="header__info">
-      <div class="header__info-name">
-        Ilya<br />
-        Baskakov
+  <div>
+    <div class="header__wrap">
+      <div class="header__modal hide">
+        <div class="header__modal-item1"><a href="#home">Home</a></div>
+        <div class="header__modal-item2"><a href="#about">About me</a></div>
+        <div class="header__modal-item3"><a href="#skills">Skills</a></div>
+        <div class="header__modal-item4">
+          <a href="#portfolio">Portfolio</a>
+        </div>
+        <div class="header__modal-item5"><a href="#contacts">Contacts</a></div>
+        <div class="header__modal-item6">
+          <img src="@/assets/close.png" alt="img" @click="getModal" />
+        </div>
+        <div class="header__modal-item7">RU | ENG</div>
       </div>
-      <div class="header__info-icon" @click="getModal">
-        <img src="@/assets/nav-icon.png" alt="img" />
-      </div>
-      <div class="header__info-desc">Fr. developer<br />21 y.o. Stavropol</div>
-      <div class="header__info-lang">RU | ENG</div>
     </div>
-    <div class="header__info-photo">
-      <img src="@/assets/avatar.png" alt="img" />
-    </div>
-    <div class="header__modal hide">
-      <div class="header__modal-item1">Home</div>
-      <div class="header__modal-item2">About me</div>
-      <div class="header__modal-item3">Skills</div>
-      <div class="header__modal-item4">Portfolio</div>
-      <div class="header__modal-item5">Contacts</div>
-      <div class="header__modal-item6">
-        <img src="@/assets/close.png" alt="img" @click="getModal" />
+    <div class="header__content">
+      <div class="header__nav">
+        <div class="header__nav-item"><a href="#home">Home</a></div>
+        <div class="header__nav-item"><a href="#about">About me</a></div>
+        <div class="header__nav-item"><a href="#skills">Skills</a></div>
+        <div class="header__nav-item"><a href="#portfolio">Portfolio</a></div>
+        <div class="header__nav-item"><a href="#contacts">Contacts</a></div>
       </div>
-      <div class="header__modal-item7">RU | ENG</div>
+      <div class="header__line"></div>
+      <div class="header__info">
+        <div class="header__info-name">
+          Ilya<br />
+          Baskakov
+        </div>
+        <div class="header__info-icon" @click="getModal">
+          <img src="@/assets/nav-icon.png" alt="img" />
+        </div>
+        <div class="header__info-desc">
+          Fr. developer<br />21 y.o. Stavropol
+        </div>
+        <div class="header__info-lang">RU | ENG</div>
+      </div>
+      <div class="header__info-photo">
+        <img src="@/assets/avatar.png" alt="img" />
+      </div>
     </div>
   </div>
 </template>
@@ -47,19 +55,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hide {
-  display: none !important;
-}
+@import '@/profile/variables.scss';
+@import '@/profile/mixins.scss';
 
 .header {
-  width: 80%;
-  margin: 0 auto;
+  &__wrap {
+    width: 100%;
+  }
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+  }
   &__nav {
+    @include style_text;
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
-    font-size: 18px;
-    line-height: 22px;
     @media (max-width: 375px) {
       display: none;
     }
@@ -91,7 +102,8 @@ export default {
     }
   }
   &__info-name {
-    font-size: 28px;
+    @include style_title;
+    text-align: left;
     line-height: 50px;
     grid-area: name;
     @media (max-width: 375px) {
@@ -112,6 +124,7 @@ export default {
     }
   }
   &__info-desc {
+    @include style_text;
     justify-self: center;
     align-self: center;
     text-align: center;
@@ -126,6 +139,7 @@ export default {
     }
   }
   &__info-lang {
+    @include style_text;
     justify-self: end;
     align-self: center;
     grid-area: lang;
@@ -148,9 +162,9 @@ export default {
   &__modal {
     background-color: white;
     position: absolute;
-    top: 20px;
-    width: 91%;
-    height: 500px;
+    top: 0;
+    width: 100%;
+    height: 610px;
     font-size: 34px;
     line-height: 42px;
     display: grid;
@@ -159,24 +173,33 @@ export default {
     grid-template-areas:
       'name close' 'about about' 'skills skills' 'portfolio portfolio'
       'contacts contacts' '. lang';
+    @media (min-width: $phone_sz) {
+      display: none;
+    }
   }
   &__modal-item1 {
     grid-area: name;
+    margin: 10px;
   }
   &__modal-item2 {
     grid-area: about;
+    margin: 10px;
   }
   &__modal-item3 {
     grid-area: skills;
+    margin: 10px;
   }
   &__modal-item4 {
     grid-area: portfolio;
+    margin: 10px;
   }
   &__modal-item5 {
     grid-area: contacts;
+    margin: 10px;
   }
   &__modal-item6 {
     grid-area: close;
+    margin: 10px;
     justify-self: end;
     img {
       width: 20px;
@@ -198,5 +221,9 @@ export default {
   @media (max-width: 375px) {
     width: 95%;
   }
+}
+
+.hide {
+  display: none !important;
 }
 </style>

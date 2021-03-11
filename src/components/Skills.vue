@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <div class="skills__title title">Skills</div>
+    <div class="skills__title"><a name="skills">Skills</a></div>
     <div class="skills__text">Use such technologies as</div>
     <div class="skills__items">
       <div class="skills__item" v-for="(item, index) in srcs" :key="index">
@@ -32,38 +32,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/profile/variables.scss';
+@import '@/profile/mixins.scss';
+
 .skills {
   display: flex;
   flex-direction: column;
-  height: 610px;
-  @media (max-width: 375px) {
+  padding: 91px 0 0 0;
+  @media (max-width: $phone_sz) {
     height: auto;
   }
   &__title {
-    text-align: center;
-    margin-top: 90px;
-    @media (max-width: 750px) {
-      margin-top: 30px;
-    }
+    @include style_title;
+    margin: 0 0 69px 0;
+    // @media (max-width: $phone_sz) {
+    //   margin-top: 30px;
+    // }
   }
   &__text {
     text-align: center;
-    margin-top: 50px;
-    @media (max-width: 750px) {
-      margin-bottom: 20px;
-    }
+    margin: 0 0 83px 0;
+    // @media (max-width: $phone_sz) {
+    //   margin-bottom: 20px;
+    // }
   }
   &__items {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 84px;
+    margin: 0 0 110px 0;
     @media (max-width: 750px) {
-      margin: 0 auto;
-      width: 200px;
       flex-wrap: wrap;
     }
-    @media (max-width: 375px) {
-      margin: 0 auto;
+    @media (max-width: $phone_sz) {
+      margin: 0 auto 110px;
       width: 100px;
       flex-wrap: wrap;
     }
@@ -73,12 +74,19 @@ export default {
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+    margin: 10px;
     img {
       width: 60px;
     }
   }
+  &__item-icon {
+    transition: 0.3s linear;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
   &__item-desc {
-    // margin-bottom: 40px;
   }
 }
 </style>

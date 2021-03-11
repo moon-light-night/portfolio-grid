@@ -1,0 +1,15 @@
+@mixin style_title {
+  font: {
+    size: 34px;
+    weight: bold;
+  }
+  line-height: 42px;
+  text-align: center;
+}
+@mixin style_text {
+  font: {
+    size: 18px;
+    weight: medium;
+  }
+  line-height: 22px;
+}
