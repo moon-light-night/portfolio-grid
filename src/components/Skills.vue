@@ -45,16 +45,10 @@ export default {
   &__title {
     @include style_title;
     margin: 0 0 69px 0;
-    // @media (max-width: $phone_sz) {
-    //   margin-top: 30px;
-    // }
   }
   &__text {
     text-align: center;
     margin: 0 0 83px 0;
-    // @media (max-width: $phone_sz) {
-    //   margin-bottom: 20px;
-    // }
   }
   &__items {
     display: flex;
@@ -78,15 +72,17 @@ export default {
     img {
       width: 60px;
     }
-  }
-  &__item-icon {
-    transition: 0.3s linear;
     &:hover {
       cursor: pointer;
-      transform: scale(1.1);
+      .skills__item-icon {
+        transition: 0.3s linear;
+        transform: scale(1.1);
+      }
+      .skills__item-desc {
+        transition: 0.3s linear;
+        color: rgb(190, 12, 12);
+      }
     }
-  }
-  &__item-desc {
   }
 }
 </style>

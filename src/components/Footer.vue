@@ -68,8 +68,11 @@
     align-items: center;
     margin: 0 0 85px 0;
     font-size: 18px;
+    transition: 0.3s linear;
     &:hover {
       cursor: pointer;
+      transform: scale(1.1);
+      color: rgb(190, 12, 12);
     }
   }
   &__links {
@@ -90,9 +93,11 @@
   width: 48px;
   height: 48px;
   transition: 0.3s linear;
+  border-radius: 50%;
   &:hover {
     cursor: pointer;
     transform: scale(1.2);
+    background-color: rgb(190, 12, 12);
   }
 }
 </style>
