@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <a name="home"></a>
+    <Arrow></Arrow>
     <Header></Header>
     <About></About>
     <Skills></Skills>
@@ -9,6 +11,7 @@
 </template>
 
 <script>
+import Arrow from './components/Arrow.vue'
 import Header from './components/Header.vue'
 import About from './components/About.vue'
 import Skills from './components/Skills.vue'
@@ -18,6 +21,7 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
+    Arrow,
     Header,
     About,
     Skills,
@@ -27,95 +31,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-//   font-family: 'Poppins', sans-serif;
-// }
-// /*Classes*/
-// .title {
-//   font-size: 34px;
-//   line-height: 42px;
-// }
-
-// /* Remove default padding */
-// ul[class],
-// ol[class] {
-//   padding: 0;
-// }
-
-// /* Remove default margin */
-// body,
-// h1,
-// h2,
-// h3,
-// h4,
-// p,
-// ul[class],
-// ol[class],
-// li,
-// figure,
-// figcaption,
-// blockquote,
-// dl,
-// dd {
-//   margin: 0;
-// }
-
-// /* Set core body defaults */
-// body {
-//   min-height: 100vh;
-//   scroll-behavior: smooth;
-//   text-rendering: optimizeSpeed;
-//   line-height: 1.5;
-//   font-family: 'Noto Sans KR', sans-serif;
-//   background-color: white;
-//   overflow-x: hidden;
-// }
-
-// /* Remove list styles on ul, ol elements with a class attribute */
-// ul[class],
-// ol[class] {
-//   list-style: none;
-// }
-
-// /* A elements that don't have a class get default styles */
-// a:not([class]) {
-//   text-decoration-skip-ink: auto;
-// }
-
-// /* Make images easier to work with */
-// img {
-//   max-width: 100%;
-//   display: block;
-// }
-
-// li {
-//   list-style-type: none;
-// }
-
-// /* Natural flow and rhythm in articles by default */
-// article > * + * {
-//   margin-top: 1em;
-// }
-
-// /* Inherit fonts for inputs and buttons */
-// input,
-// button,
-// textarea,
-// select {
-//   font: inherit;
-// }
-
-// /* Remove all animations and transitions for people that prefer not to see them */
-// @media (prefers-reduced-motion: reduce) {
-//   * {
-//     animation-duration: 0.01ms !important;
-//     animation-iteration-count: 1 !important;
-//     transition-duration: 0.01ms !important;
-//     scroll-behavior: auto !important;
-//   }
-// }
-</style>
+<style lang="scss"></style>

@@ -7,7 +7,12 @@
       <div class="footer__description">
         Want to know more or just chat? You are welcome!
       </div>
-      <a class="footer__btn">Send message</a>
+      <a
+        class="footer__btn"
+        href="mailto:baskakov.11111@mail.ru"
+        target="_blank"
+        >Send message</a
+      >
       <div class="footer__links">
         <div class="footer__link">
           <svg class="svg-icon">
@@ -94,6 +99,7 @@
   height: 48px;
   transition: 0.3s linear;
   border-radius: 50%;
+  margin: 10px;
   &:hover {
     cursor: pointer;
     transform: scale(1.2);

@@ -2,17 +2,17 @@
   <div>
     <div class="header__wrap">
       <div class="header__modal hide">
-        <div class="header__modal-item1"><a href="#home">Home</a></div>
-        <div class="header__modal-item2"><a href="#about">About me</a></div>
-        <div class="header__modal-item3"><a href="#skills">Skills</a></div>
-        <div class="header__modal-item4">
+        <div class="header__modal-item"><a href="#home">Home</a></div>
+        <div class="header__modal-item"><a href="#about">About me</a></div>
+        <div class="header__modal-item"><a href="#skills">Skills</a></div>
+        <div class="header__modal-item">
           <a href="#portfolio">Portfolio</a>
         </div>
-        <div class="header__modal-item5"><a href="#contacts">Contacts</a></div>
-        <div class="header__modal-item6">
+        <div class="header__modal-item"><a href="#contacts">Contacts</a></div>
+        <div class="header__modal-item">
           <img src="@/assets/close.png" alt="img" @click="getModal" />
         </div>
-        <div class="header__modal-item7">RU | ENG</div>
+        <div class="header__modal-item">RU | ENG</div>
       </div>
     </div>
     <div class="header__content">
@@ -164,7 +164,7 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 610px;
+    height: 100vh;
     font-size: 34px;
     line-height: 42px;
     display: grid;
@@ -177,29 +177,28 @@ export default {
       display: none;
     }
   }
-  &__modal-item1 {
+  &__modal-item {
+    display: flex;
+    align-self: center;
+    margin: 10px;
+  }
+  &__modal-item:nth-child(1) {
     grid-area: name;
-    margin: 10px;
   }
-  &__modal-item2 {
+  &__modal-item:nth-child(2) {
     grid-area: about;
-    margin: 10px;
   }
-  &__modal-item3 {
+  &__modal-item:nth-child(3) {
     grid-area: skills;
-    margin: 10px;
   }
-  &__modal-item4 {
+  &__modal-item:nth-child(4) {
     grid-area: portfolio;
-    margin: 10px;
   }
-  &__modal-item5 {
+  &__modal-item:nth-child(5) {
     grid-area: contacts;
-    margin: 10px;
   }
-  &__modal-item6 {
+  &__modal-item:nth-child(6) {
     grid-area: close;
-    margin: 10px;
     justify-self: end;
     img {
       width: 20px;
@@ -208,11 +207,13 @@ export default {
       }
     }
   }
-  &__modal-item7 {
+  &__modal-item:nth-child(7) {
     grid-area: lang;
-    justify-self: end;
+    position: absolute;
+    right: 0;
     transform: rotate(90deg);
-    margin-right: -13%;
+    font-size: 26px;
+    top: -20px;
     height: 70px;
   }
   @media (max-width: 540px) {
